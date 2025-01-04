@@ -1,13 +1,31 @@
-.carousel {
+body {
     display: flex;
-    flexdirection: row;
-    overflow-x: scroll;
-    background: gray;
-    width: 500px;
-    height: 400px;
+    margin-left: 16px;
 }
-.carousel-item {
-    padding: 8px;
+
+main {
+    position: relative;
+    width: 75%;
+}
+
+aside {
+    position: sticky;
+    width: 25%;
+    height: 100%;
+    background: black;
+}
+
+aside li {
+    color: red;
+}
+
+.planet__navigation {
+    margin: 16px;
+}
+
+.planets__container {
+    height: 800px;
+    overflow-y: scroll;
 }
 
 .image-container {
@@ -15,8 +33,8 @@
     border-radius: 8px;
     overflow: hidden;
     transition: border 0.2s;
-    width: 400px;
-    height: 300px;
+    width: 1000px;
+    aspect-ratio: 16/8;
 }
 
 img {
@@ -33,4 +51,9 @@ li {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+html,
+body {
+    height: 100%;
 }
