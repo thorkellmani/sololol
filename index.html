@@ -1,80 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>SÓLÓLÓL</title>
         <link rel="stylesheet" href="styles.css">
         <meta charset="utf-8" />
-        <meta name="author" content="Þorkell Máni Þorkelsson"
-        <meta name="author" content="Rebekka Ashley Egilsdóttir"
-        <meta name="description" content="Stjórnborð Sólólól. Stýrir hvaða sól Sólólólin lýsir upp umhverfi sitt sem"
-        <title>Sólólól</title>
+        <meta name="author" content="Þorkell Máni Þorkelsson" />
+        <meta name="author" content="Rebekka Ashley Egilsdóttir"/ >
+        <meta name="description" content="Stjórnborð Sólólól. Stýrir hvaða sól Sólólólin lýsir upp umhverfi sitt sem"/>
+
     </head>
     <body>
+        <!-- INITIAL TITLE CARD; DISAPPEARS AFTER 5 SEC-->
+        <!--<div class="star__container hide">
+            <div class="star sun sun__animation"></div>
+            <div class="star polaris polaris__animation"></div>
+            <div class="star procyon procyon__animation"></div>
+            <div class="star proxima__centauri proxima__centauri__animation"></div>
+            <div class="star vega vega__animation"></div>
+            <div class="star hadar hadar__animation"></div>
+            </div>-->
         <main>
-            <h2>Planet viewer</h2>
-            <section>
-                <ol class="planets__container">
-                    <li id="planet__1">
-                        <figure>
-                            <div class="image-container">
-                                <img src="./assets/procyon.jpg" alt="Procyon shining blue" width="1000" height="800">
-                            </div>
-                            <figcaption>SUN</figcaption>
-                        </figure>
-                    </li>
-                    <li id="planet__2">
-                        <figure>
-                            <div class="image-container">
-                                <img src="./assets/procyon.jpg" alt="Procyon shining blue" width="1000" height="800">
-                            </div>
-                        <figcaption>POLARIS</figcaption>
-                        </figure>
-                    </li>
-                    <li id="planet__3">
-                        <figure>
-                            <div class="image-container">
-                                <img src="./assets/procyon.jpg" alt="Procyon shining blue" width="1000" height="800">
-                            </div>
-                            <figcaption>PROCYON</figcaption>
-                        </figure>
-                    </li>
-                    <li id="planet__4">
-                        <figure>
-                            <div class="image-container">
-                                <img src="./assets/procyon.jpg" alt="Procyon shining blue" width="1000" height="800">
-                            </div>
-                            <figcaption>PROXIMA CENTAURI</figcaption>
-                        </figure>
-                    </li>
-                    <li id="planet__5">
-                        <figure>
-                            <div class="image-container">
-                                <img src="./assets/procyon.jpg" alt="Procyon shining blue" width="1000" height="800">
-                            </div>
-                            <figcaption>VEGA</figcaption>
-                        </figure>
-                    </li>
-                    <li id="planet__6">
-                        <figure>
-                            <div class="image-container">
-                                <img src="./assets/procyon.jpg" alt="Procyon shining blue" width="1000" height="800">
-                            </div>
-                            <figcaption>HADAR</figcaption>
-                        </figure>
-                    </li>
-
-                </ol>
-            </section>
+            <section class="star__container">
+               <div class="star sun"></div>
+               <div class="star polaris"></div>
+               <div class="star procyon"></div>
+               <div class="star proxima__centauri"></div>
+               <div class="star vega"></div>
+               <div class="star hadar"></div>
+           </section>
         </main>
-        <aside>
-            <h3>Planet navigation</h3>
-            <ol class="planet__navigation">
-                <li><h4>SUN</h4></li>
-                <li><h4>POLARIS</h4></li>
-                <li><h4>PROCYON</h4></li>
-                <li><h4>PROXIMA CENTAURI</h4></li>
-                <li><h4>VEGA</h4></li>
-                <li><h4>HADAR</h4></li>
-            </ol>c
-        </aside>
+
     </body>
 </html>
