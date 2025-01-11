@@ -125,8 +125,7 @@ body {
     animation: sun__rise 3s ease backwards;
 }
 .polaris__animation {
-    transform: translate(-200%, 4px);
-    transition: all 0.5s ease-in-out;
+    animation: drop__polaris 3s ease backwards;
 }
 .procyon__animation {
     animation: drop__procyon 3s ease backwards;
@@ -163,7 +162,7 @@ body {
         top: calc(26% - 50px);
     }
     100% {
-        top: 140%;
+        top: calc(58% - 50px);
     }
 }
 @keyframes drop__vega {
@@ -171,7 +170,7 @@ body {
         top: calc(26% - 50px);
     }
     100% {
-        top: 180%;
+        top: calc(74% - 50px);
     }
 }
 @keyframes drop__hadar {
@@ -179,7 +178,7 @@ body {
         top: calc(26% - 50px);
     }
     100% {
-        top: 220%;
+        top: calc(90% - 50px);
     }
 }
 
