@@ -86,7 +86,7 @@ body {
 }
 
 .procyon {
-    top: calc(42% - 50px);
+    top: calc(26% - 50px);
     background: radial-gradient(#ffffff, #f2f2f2);
     z-index: 8;
     box-shadow:
@@ -149,12 +149,21 @@ body {
     }
 }
 
+@keyframes drop__polaris {
+    0% {
+        top: calc(26% - 50px);
+    }
+    100% {
+        left: 25%;
+    }
+}
+
 @keyframes drop__procyon {
     0% {
         top: calc(26% - 50px);
     }
     100% {
-        top: calc(42% - 50px);
+        left: calc(75% - 50px);
     }
 }
 @keyframes drop__proxima__centauri {
@@ -162,7 +171,7 @@ body {
         top: calc(26% - 50px);
     }
     100% {
-        top: calc(58% - 50px);
+        top: calc(42% - 50px);
     }
 }
 @keyframes drop__vega {
@@ -170,7 +179,8 @@ body {
         top: calc(26% - 50px);
     }
     100% {
-        top: calc(74% - 50px);
+        top: calc(42% - 50px);
+        left: calc(60% - 50px);
     }
 }
 @keyframes drop__hadar {
@@ -178,7 +188,8 @@ body {
         top: calc(26% - 50px);
     }
     100% {
-        top: calc(90% - 50px);
+        left: calc(40% - 50px);
+        top: calc(50% - 50px);
     }
 }
 
