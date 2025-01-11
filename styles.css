@@ -2,12 +2,34 @@ body {
     background: black;
 }
 
-.container {
+.star__splash__container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 160px;
+    margin: 48px 0;
+    width: 100%;
+}
+
+.splash__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 160px;
+    margin: 48px 0;
+    width: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 160px;
+    margin: 48px 0;
 }
 
 .hidden {
@@ -16,13 +38,24 @@ body {
     width: 0;
 }
 
+.stars__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 .star__container {
 }
 
 .star {
+    position: absolute;
+
     width: 100px;
     height: 100px;
     border-radius: 50%;
+
+    left: calc(50% - 50px);
 }
 
 @keyframes hover__to__side {
@@ -35,7 +68,7 @@ body {
 }
 
 .sun {
-    top: 10%;
+    top: calc(10% - 50px);
     background: radial-gradient(#ff0, #d00);
     z-index: 10;
     box-shadow:
@@ -44,7 +77,7 @@ body {
 }
 
 .polaris {
-    top: 20%;
+    top: calc(26% - 50px);
     background: radial-gradient(#f5eaa2, #f7bc03);
     z-index: 9;
     box-shadow:
@@ -53,7 +86,7 @@ body {
 }
 
 .procyon {
-    top: 30%;
+    top: calc(42% - 50px);
     background: radial-gradient(#ffffff, #f2f2f2);
     z-index: 8;
     box-shadow:
@@ -62,7 +95,7 @@ body {
 }
 
 .proxima__centauri {
-    top: 40%;
+    top: calc(58% - 50px);
     background: radial-gradient(#f97d75, #9d0301);
     z-index: 7;
     box-shadow:
@@ -71,7 +104,7 @@ body {
 }
 
 .vega {
-    top: 50%;
+    top: calc(74% - 50px);
     background: radial-gradient(#82e8fc, #05bce1);
     z-index: 6;
     box-shadow:
@@ -80,7 +113,7 @@ body {
 }
 
 .hadar {
-    top: 60%;
+    top: calc(90% - 50px);
     background: radial-gradient(#73a6fc, #0c3ea9);
     z-index: 5;
     box-shadow:
@@ -91,9 +124,9 @@ body {
 .sun__animation {
     animation: sun__rise 3s ease backwards;
 }
-
 .polaris__animation {
-    animation: drop__polaris 3s ease backwards;
+    transform: translate(-200%, 4px);
+    transition: all 0.5s ease-in-out;
 }
 .procyon__animation {
     animation: drop__procyon 3s ease backwards;
@@ -110,32 +143,24 @@ body {
 
 @keyframes sun__rise {
     0% {
-        top: 35%;
+        top: calc(26% - 50px);
     }
     100% {
         top: 10%;
     }
 }
-@keyframes drop__polaris {
-    0% {
-        top: 35%;
-    }
-    100% {
-        top: 50%;
-    }
-}
 
 @keyframes drop__procyon {
     0% {
-        top: 35%;
+        top: calc(26% - 50px);
     }
     100% {
-        top: 90%;
+        top: calc(42% - 50px);
     }
 }
 @keyframes drop__proxima__centauri {
     0% {
-        top: 35%;
+        top: calc(26% - 50px);
     }
     100% {
         top: 140%;
@@ -143,7 +168,7 @@ body {
 }
 @keyframes drop__vega {
     0% {
-        top: 35%;
+        top: calc(26% - 50px);
     }
     100% {
         top: 180%;
@@ -151,7 +176,7 @@ body {
 }
 @keyframes drop__hadar {
     0% {
-        top: 35%;
+        top: calc(26% - 50px);
     }
     100% {
         top: 220%;
@@ -221,7 +246,7 @@ body {
 }
 
 html {
-    height: 100%;
+    height: 1500px;
     margin: 0;
     padding: 0;
     border: 0;
