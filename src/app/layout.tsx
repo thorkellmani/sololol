@@ -24,9 +24,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <head>
+        <title>SÓLÓLÓL</title>
+        <meta name="author" content="Þorkell Máni Þorkelsson" />
+        <meta name="author" content="Rebekka Ashley Egilsdóttir" />
+        <meta
+          name="description"
+          content="Stjórnborð Sólólól. Stýrir hvaða sól Sólólólin lýsir upp umhverfi sitt sem"
+        />
+
+        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          {children}
+        </body>
+      </head>
     </html>
   );
 }
