@@ -1,0 +1,14 @@
+import styles from "./stars.module.scss";
+
+const STARS = [
+  "sun",
+  "polaris",
+  "procyon",
+  "proxima_centauri",
+  "vega",
+  "hadar",
+];
+
+export const StarsLayer = () => {
+  return STARS.map((star) => <div className={styles.star}></div>);
+};

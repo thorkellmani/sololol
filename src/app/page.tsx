@@ -1,9 +1,17 @@
-import styles from "./styles.module.scss";
+import { SolarSystemLayer } from "./layers/solar_system/solar__system";
+import { StarsBackgroundLayer } from "./layers/starsBackground/starsBackground";
+import { SunriseLayer } from "./layers/sunrise/sunrise";
 
 export default function Home() {
   return (
     <>
-      <div className={styles.stars} />
+      <SolarSystemLayer />
+      {
+        //<StarsBackgroundLayer />
+      }
+      {
+        //<SunriseLayer />
+      }
       {/*<div className={styles.stars__container}>
         <div className="star sun sun__animation"></div>
         <div className="star polaris polaris__animation"></div>

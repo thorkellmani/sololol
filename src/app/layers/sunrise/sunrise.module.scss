@@ -1,0 +1,41 @@
+$sun-diameter: 700px;
+
+.sun__container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sun {
+    position: absolute;
+    width: $sun-diameter;
+    height: $sun-diameter;
+    border-radius: 50%;
+    background: radial-gradient(#ff0, #d00);
+    box-shadow:
+        0 0 40px 6px #f20,
+        0 0 150px 10px #f33;
+    top: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include animation("slide-up 6s ease-in-out 1s forwards");
+}
+
+.title {
+    font-size: 120px;
+    color: white;
+}
+
+@include keyframes(slide-up) {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: calc(50% - ($sun-diameter/2));
+    }
+}

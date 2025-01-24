@@ -1,0 +1,58 @@
+.star {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.sun {
+    background: radial-gradient(#ff0, #d00);
+    z-index: 10;
+    box-shadow:
+        0 0 40px 6px #f20,
+        0 0 150px 10px #f33;
+}
+
+.polaris {
+    top: calc(26% - 50px);
+    background: radial-gradient(#f5eaa2, #f7bc03);
+    z-index: 9;
+    box-shadow:
+        0 0 40px 6px #f5efa2,
+        0 0 150px 10px #fafaa0;
+}
+
+.procyon {
+    top: calc(26% - 50px);
+    background: radial-gradient(#ffffff, #f2f2f2);
+    z-index: 8;
+    box-shadow:
+        0 0 40px 6px #ffffff,
+        0 0 150px 10px #e6e6e6;
+}
+
+.proxima__centauri {
+    top: calc(58% - 50px);
+    background: radial-gradient(#f97d75, #9d0301);
+    z-index: 7;
+    box-shadow:
+        0 0 40px 6px #fa8c85,
+        0 0 150px 10px #fcbab6;
+}
+
+.vega {
+    top: calc(74% - 50px);
+    background: radial-gradient(#82e8fc, #05bce1);
+    z-index: 6;
+    box-shadow:
+        0 0 40px 6px #b4f1fd,
+        0 0 150px 10px #e6fafe;
+}
+
+.hadar {
+    top: calc(90% - 50px);
+    background: radial-gradient(#73a6fc, #0c3ea9);
+    z-index: 5;
+    box-shadow:
+        0 0 40px 6px #7395fc,
+        0 0 150px 10px #7388fc;
+}

@@ -1,0 +1,64 @@
+@use "sass:math";
+@use "sass:string";
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+// Function to generate multiple box-shadow values for stars
+@function multiple-box-shadow($number_of_stars) {
+    $value: "#{math.random(1500)}px #{math.random(1500)}px #FFF"; // Initial shadow
+    @for $i from 2 through $number_of_stars {
+        $value: "#{$value}, #{math.random(1500)}px #{math.random(1500)}px #FFF"; // Add more shadows
+    }
+    @return string.unquote($value); // Return the concatenated value
+}
+
+.stars__background {
+}
+
+.star {
+    background: white;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+}
+
+@for $i from 0 to 200 {
+    .stars__background .star:nth-child(#{$i}) {
+        //this should randomize by percent up to 100% (20%, 45%, 77%, ...)
+        left: math.percentage(math.random(1000) / 1000);
+        top: math.percentage(math.random(1000) / 1000);
+    }
+}
+
+@include keyframes(slide__up) {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+}
