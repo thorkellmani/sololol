@@ -1,0 +1,15 @@
+.starList {
+    list-style: none;
+    width: 20%;
+    margin: auto;
+    background-color: white;
+
+ol li {
+    margin: 25px 0;
+    padding: 25px;
+}
+
+li:hover {
+    background-color: blue;
+    color: white;
+}
