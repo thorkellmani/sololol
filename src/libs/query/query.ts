@@ -1,16 +1,18 @@
 export const apiQuery = async (id: string): Promise<"success" | "failure"> => {
-  const API_KEY = import.meta.env.VITE_API_KEY;
-  const API_URL = import.meta.env.VITE_API_URL;
+  const host = import.meta.env.DEV
+    ? "http://localhost:3000/"
+    : "https://sololol.vercel.app/";
 
-  const headers = new Headers();
-  headers.append("x-api-key", API_KEY);
+  const url = host + "api/sendRequest";
 
   const requestOptions = {
     method: "POST",
-    headers: headers,
+    body: JSON.stringify({
+      id: id,
+    }),
   };
 
-  return fetch(`${API_URL}/${id}`, requestOptions)
+  return fetch(url, requestOptions)
     .catch((err) => {
       console.warn(err);
       return "failure";

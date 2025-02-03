@@ -10,11 +10,6 @@ interface ReqBody {
 }
 
 function POST(request: VercelRequest, response: VercelResponse) {
-  /*
-  const { name = 'World' } = request.query;
-  response.send(`Hello ${name}!`);
-  */
-
   let numericalId: number;
   try {
     const body = JSON.parse(request.body) as ReqBody;
