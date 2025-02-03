@@ -1,20 +1,29 @@
-export function POST(request: Request) {
-  return postRequest(request);
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
+import type { VercelRequest, VercelResponse } from "@vercel/node";
+
+interface ReqBody {
+  id?: string;
 }
 
-async function postRequest(request: Request) {
-  const formData = await request.formData();
-  const id = formData.get("starId")?.valueOf();
-
-  if (!id || typeof id !== "string") {
-    return new Response("Invalid id");
-  }
+function POST(request: VercelRequest, response: VercelResponse) {
+  /*
+  const { name = 'World' } = request.query;
+  response.send(`Hello ${name}!`);
+  */
 
   let numericalId: number;
   try {
-    numericalId = Number.parseInt(id);
-  } catch {
-    return new Response("Malformed id");
+    const body = request.body as ReqBody;
+    if (!body.id) {
+      return response.status(400).send("Invalid id");
+    }
+
+    numericalId = Number.parseInt(body.id);
+  } catch (error) {
+    return response.status(400).json({ error });
   }
 
   if (numericalId < 1 || numericalId > 6) {
@@ -25,7 +34,7 @@ async function postRequest(request: Request) {
   const API_URL = process.env.API_URL;
 
   if (!API_KEY || !API_URL) {
-    return;
+    return response.status(500);
   }
 
   const headers = new Headers();
@@ -36,10 +45,7 @@ async function postRequest(request: Request) {
     headers: headers,
   };
 
-  return fetch(`${API_URL}/${numericalId}`, requestOptions)
-    .catch((err) => {
-      console.warn(err);
-      return "failure";
-    })
-    .then(() => "success");
+  return fetch(`${API_URL}/${numericalId}`, requestOptions);
 }
+
+export default POST;
