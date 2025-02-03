@@ -7,8 +7,6 @@ import StarSection from "./components/starSection/starSection";
 function App() {
   const [selectedStar, setSelectedStar] = useState<Star | undefined>();
 
-  console.log(Stars);
-  console.log(selectedStar);
   return (
     <main>
       <ol className="starList">
