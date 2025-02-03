@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
+import { waitUntil } from "@vercel/functions";
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 interface ReqBody {
@@ -27,14 +28,14 @@ function POST(request: VercelRequest, response: VercelResponse) {
   }
 
   if (numericalId < 1 || numericalId > 6) {
-    return new Response("Invalid id");
+    return response.status(400).send("Invalid id");
   }
 
   const API_KEY = process.env.API_KEY;
   const API_URL = process.env.API_URL;
 
   if (!API_KEY || !API_URL) {
-    return response.status(500);
+    return response.status(500).send("unspecified error");
   }
 
   const headers = new Headers();
@@ -45,7 +46,8 @@ function POST(request: VercelRequest, response: VercelResponse) {
     headers: headers,
   };
 
-  return fetch(`${API_URL}/${numericalId}`, requestOptions);
+  waitUntil(fetch(`${API_URL}/${numericalId}`, requestOptions));
+  return response.status(200).send("request received");
 }
 
 export default POST;
