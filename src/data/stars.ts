@@ -1,6 +1,6 @@
-import { Star } from "./types";
+import { StarType } from "../types";
 
-export const Stars: Star[] = [
+export const Stars: StarType[] = [
   {
     id: "1",
     nameIs: "Sólin",
@@ -15,8 +15,8 @@ export const Stars: Star[] = [
   },
   {
     id: "3",
-    nameIs: "Prókíón",
-    nameEn: "Procyon",
+    nameIs: "Síríus",
+    nameEn: "Sirius",
     color: "#fafeffcc",
   },
   {
@@ -33,8 +33,8 @@ export const Stars: Star[] = [
   },
   {
     id: "6",
-    nameIs: "Hadar",
-    nameEn: "Hadar",
+    nameIs: "Hadar (Beta centauri)",
+    nameEn: "Hadar (Beta centauri)",
     color: "#0009ffcc",
   },
 ];

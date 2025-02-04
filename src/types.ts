@@ -1,4 +1,4 @@
-export interface Star {
+export interface StarType {
   id: string;
   nameIs: string;
   nameEn: string;
@@ -6,3 +6,5 @@ export interface Star {
   descriptionEn?: string;
   color: string;
 }
+
+export type Locale = "is" | "en";
