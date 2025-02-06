@@ -60,7 +60,7 @@
 .starGrid {
     display: flex;
     flex-flow: column;
-    gap: 200px;
+    gap: 150px;
     margin: 0 auto;
     overflow-y: hidden;
     max-width: 900px;
