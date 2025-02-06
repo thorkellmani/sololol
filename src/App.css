@@ -11,8 +11,9 @@
 
 .chooseShelf {
     position: sticky;
-    bottom: -10px;
-    height: 160px;
+    bottom: 0px;
+    min-height: 60px;
+    max-height: 160px;
     background: black;
     margin: 8px 0;
     width: 90vw;
@@ -34,8 +35,9 @@
 }
 
 .submitStarButton {
-    margin: 0 auto;
+    margin: 16px auto;
     margin-top: 24px;
+
     padding: 24px 36px;
     border: 1px solid #eb7734;
     border-radius: 16px;
@@ -58,7 +60,7 @@
 .starGrid {
     display: flex;
     flex-flow: column;
-    gap: 20px;
+    gap: 200px;
     margin: 0 auto;
     overflow-y: hidden;
     max-width: 900px;
